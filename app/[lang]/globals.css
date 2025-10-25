@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+[data-theme='light'] {
+  --p: #fff;
+  --pc: #0f0115;
+  --s: #b288cc;
+  --sc: #250635;
+  --tc: #320a46;
+  --a: #320a46;
+  --n: #250635;
+
+  --b: #dfdcdc;
+  --marquee: #dbe3f7;
+
+  --gradient-start: #320a46;
+  --gradient-mid: #7e3a9d;
+  --gradient-end: #dbe3f7;
+}
+
+[data-theme='dark'] {
+  --p: #0f0115;     
+  --pc: #d9c2e9;
+  --s: #250635;
+  --sc: #b288cc;
+  --tc: #e8d7f2;
+  --a: #a64ca6;
+  --n: #f9f4fb;
+
+  --b: #0f0115;
+  --marquee: #3c1e4d;
+
+  --gradient-start: #320a46;
+  --gradient-mid: #7e3a9d;
+  --gradient-end: #d9c2e9;
+}
+
+@theme {
+  --color-primary: var(--p);
+  --color-primary-content: var(--pc);
+  --color-secondary: var(--s);
+  --color-secondary-content: var(--sc);
+  --color-tertiary-content: var(--tc);
+  --color-accent: var(--a);
+  --color-neutral: var(--n);
+  --color-border: var(--b);
+  --color-marquee: var(--marquee);
+  --color-tag: #a64ca6;
+
+  --animate-fade-in: fade-in 0.5s ease-out 1;
+  --animate-blink: blink 0.8s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.3s ease-out 1;
+
+  --background-image-large-glow: url('../../assets/images/bg-lg.png');
+  --background-image-small-glow: url('../../assets/images/bg-lg.png');
+  --background-image-skill-gradient: linear-gradient(to right, var(--p), #5d3b76, var(--p));
+
+  --background-position-large-glow-position: 110% 30%;
+  --background-position-small-glow-position: 50% 600%;
+
+  --font-fira-code: Fira Code, monospace;
+  --font-inter: Inter, sans-serif;
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes fade-up {
+    0% { top: 5px; }
+    100% { top: 0px; }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scrollbar-width: none;
+  ::-webkit-scrollbar { display: none; }
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply bg-primary text-primary-content;
+}
+
+.rehype-code-title {
+  @apply text-primary-content rounded-t-md bg-[#2e0f3a] px-6 py-3 text-sm font-medium;
+}
+
+h2,
+h3 {
+  scroll-margin-top: 5.25rem;
+}
+
+section {
+  scroll-margin-top: 1.5rem;
+}
+
+@supports (-webkit-hyphens: none) {
+  * {
+    scroll-margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2,
+  h3 {
+    scroll-margin-top: 1.5rem;
+  }
+}
+
+.hide-scrollbar {
+  -webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+}

@@ -1,0 +1,14 @@
+{
+    "welcome" : "Bonjour, c'est Swann Waeles",
+    "hero_text": "Je vous souhaite la bienvenue sur mon portfolio. Je suis ravi de vous y accueillir.",
+    "hero_cv": "Téléchargez mon CV",
+    "hero_linkedin": "Mon LinkedIn",
+    "role_fullstack": "DEVELOPPEUR FULLSTACK",
+    "role_unemployed": "EN RECHERCHE D'EMPLOI",
+    "navbar_home": "#Accueil",
+    "navbar_projects": "#Projets",
+    "navbar_services": "#Services",
+    "theme_choice": "Choix du thème",
+    "theme_dark": "Sombre",
+    "theme_light": "Clair"
+}
