@@ -10,5 +10,8 @@
     "navbar_services": "#Services",
     "theme_choice": "Theme choice",
     "theme_dark": "Dark",
-    "theme_light": "Light"
+    "theme_light": "Light",
+    "error_404" : "Error 404",
+    "error_description": "The page you are looking for does not exist or has been moved.",
+    "error_home": "Back to Home"
 }

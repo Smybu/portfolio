@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
   const pathname = usePathname();
   const { lang } = useI18n()
-    const t = getDictionary(lang)
+  const t = getDictionary(lang)
 
   const navItems = [
   {

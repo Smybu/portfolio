@@ -10,5 +10,8 @@
     "navbar_services": "#Services",
     "theme_choice": "Choix du thème",
     "theme_dark": "Sombre",
-    "theme_light": "Clair"
+    "theme_light": "Clair",
+    "error_404" : "Erreur 404",
+    "error_description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "error_home": "Retour à l’accueil"
 }
