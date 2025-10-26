@@ -35,7 +35,7 @@ const Hero = () => {
               {t.hero_cv}
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/swann-waeles/"
               aria-label="View LinkedIn Profile"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
               {t.hero_linkedin}

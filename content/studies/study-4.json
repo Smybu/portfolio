@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "degree": "Bac Général",
+    "date": "2018 - 2021",
+    "degreeDetails": "Bac Général spécialité Mathématiques, Physique-Chimie, Numérique et Sciences Informatiques",
+    "institution": "/logo-lycée.png"
+  },
+  "en": {
+    "degree": "General Baccalaureate",
+    "date": "2018 - 2021",
+    "degreeDetails": "General Baccalaureate with specializations in Mathematics, Physics-Chemistry, Digital and Computer Sciences",
+    "institution": "/logo-lycée.png"
+  }
+}

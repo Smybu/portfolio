@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "degree": "BTS Informatique",
+    "date": "2021 - 2023",
+    "degreeDetails": "BTS Systèmes Numériques option A Informatique et Réseaux",
+    "institution": "/logo-bts.png"
+  },
+  "en": {
+    "degree": "BTS in Computer Science",
+    "date": "2021 - 2023",
+    "degreeDetails": "BTS Digital Systems, option A Computer Science and Networks",
+    "institution": "/logo-bts.png"
+  }
+}

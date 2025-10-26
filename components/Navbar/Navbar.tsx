@@ -21,8 +21,8 @@ const Navbar = () => {
     href: `/${lang}`,
   },
   {
-    label: t.navbar_projects,
-    href: `/${lang}#projects`,
+    label: t.navbar_studies,
+    href: `/${lang}#studies`,
   },
   {
     label: t.navbar_services,

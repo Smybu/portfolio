@@ -20,11 +20,13 @@ export interface Heading {
   items: Heading[]
 }
 
-export interface Testimonial {
-  name: string
-  title?: string
-  feedback: string
-  image: string
-  stars: number
-  createdAt: string
+export interface LocalizedStudyContent {
+  degree: string
+  date: string
+  degreeDetails: string
+  institution: string
+}
+
+export interface Study {
+  [lang: string]: LocalizedStudyContent
 }

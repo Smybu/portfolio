@@ -16,7 +16,7 @@ const marqueeAnimation: MarqueeAnimationType = (element, elementWidth, windowWid
   element.animate(
     [{ transform: 'translateX(0)' }, { transform: `translateX(${windowWidth - elementWidth}px)` }],
     {
-      duration: 20000,
+      duration: 8000,
       easing: 'linear',
       direction: 'alternate',
       iterations: Infinity,

@@ -11,7 +11,7 @@ type SkillsProps = {
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <MarqueeWrapper className="from-primary to-primary via-marquee bg-linear-to-r">
-      <div className="flex gap-8 lg:gap-24">
+      <div className="flex gap-30 lg:gap-30">
         {skills.map(({ name, icon }, index) => (
           <span
             key={index}

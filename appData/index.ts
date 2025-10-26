@@ -122,23 +122,15 @@ export const skillList = [
     icon: NodejsIcon,
   },
   {
-    name: 'Express.js',
-    icon: ExpressjsIcon,
-  },
-  {
-    name: 'Nest.js',
-    icon: NestjsIcon,
-  },
-  {
-    name: 'Socket.io',
-    icon: SocketIcon,
+    name: 'Tailwind CSS',
+    icon: TailwindCSS,
   },
 ]
 
 export const footerLinks = [
   { title: 'About', href: '#' },
   { title: 'Projects', href: '#projects' },
-  { title: 'Testimonials', href: '#testimonials' },
+  { title: 'Studies', href: '#studies' },
   {
     title: 'Blogs',
     href: '#blogs',
