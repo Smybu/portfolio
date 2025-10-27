@@ -4,15 +4,15 @@ import Image from 'next/image'
 
 const MarqueeWrapper = dynamic(() => import('../Marquee/MarqueeWrapper'), { ssr: false })
 
-type SkillsProps = {
-  skills: { name: string; icon: string }[]
+type LanguagesProps = {
+  languages: { name: string; icon: string }[]
 }
 
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
+const Languages: React.FC<LanguagesProps> = ({ languages }) => {
   return (
     <MarqueeWrapper className="from-primary to-primary via-marquee bg-linear-to-r">
       <div className="flex gap-30 lg:gap-30">
-        {skills.map(({ name, icon }, index) => (
+        {languages.map(({ name, icon }, index) => (
           <span
             key={index}
             className="font-inter text-primary-content flex items-center text-xs lg:text-base">
@@ -25,4 +25,4 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
   )
 }
 
-export default Skills
+export default Languages

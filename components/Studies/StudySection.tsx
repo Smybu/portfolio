@@ -21,7 +21,6 @@ const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
   const [activeCard, setActiveCard] = useState(0)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  // 🌍 Multilingue
   const studySectionHeading: StudySectionHeadingProps = {
     fr: {
       title: '# Études',
@@ -37,7 +36,6 @@ const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
 
   const lang = useParams().lang?.toString() || 'fr'
 
-  // 🖱️ Gestion du drag-to-scroll
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
@@ -56,7 +54,7 @@ const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
     if (!isDragging || !scrollRef.current) return
     e.preventDefault()
     const x = e.pageX - scrollRef.current.offsetLeft
-    const walk = (x - startX) * 1.5 // multiplier = vitesse de défilement
+    const walk = (x - startX) * 1.5
     scrollRef.current.scrollLeft = scrollLeft - walk
   }
 

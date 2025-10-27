@@ -3,6 +3,7 @@ import { FC, SVGProps } from 'react'
 import Earning from '../assets/icons/earning.svg'
 import ExpressjsIcon from '../assets/icons/express.svg'
 import JavaScriptIcon from '../assets/icons/javascript.svg'
+import PhpIcon from '../assets/icons/php.svg'
 import Likes from '../assets/icons/likes.svg'
 import NestjsIcon from '../assets/icons/nest.svg'
 import NextjsIcon from '../assets/icons/nextjs.svg'
@@ -13,6 +14,10 @@ import Star from '../assets/icons/star.svg'
 import TailwindCSS from '../assets/icons/tailwind-css.svg'
 import Timer from '../assets/icons/timer.svg'
 import TypescriptIcon from '../assets/icons/typescript.svg'
+import PythonIcon from '../assets/icons/python.svg'
+import CIcon from '../assets/icons/c.svg'
+import JavaIcon from '../assets/icons/java.svg'
+import DatabaseIcon from '../assets/icons/database.svg'
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -320,6 +325,7 @@ export {
   GithubIcon,
   Instagram,
   JavaScriptIcon,
+  PhpIcon,
   Likes,
   LinkedIn,
   MsgIcon,
@@ -336,4 +342,8 @@ export {
   Timer,
   TypescriptIcon,
   X,
+  PythonIcon,
+  CIcon,
+  JavaIcon,
+  DatabaseIcon
 }

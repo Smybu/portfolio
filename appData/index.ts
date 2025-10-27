@@ -1,12 +1,14 @@
 // Data for portfolio
 import {
-  ExpressjsIcon,
+  CIcon,
+  DatabaseIcon,
+  JavaIcon,
   JavaScriptIcon,
-  NestjsIcon,
   NextjsIcon,
   NodejsIcon,
+  PhpIcon,
+  PythonIcon,
   ReactIcon,
-  SocketIcon,
   TailwindCSS,
   TypescriptIcon,
 } from '../utils/icons'
@@ -65,42 +67,46 @@ export const projects = [
   },
 ]
 
-// Service Data
-export const serviceData = [
+export const skillData = [
   {
     icon: JavaScriptIcon,
-    title: 'JavaScript Development',
-    shortDescription: 'Creating dynamic and interactive web applications using JavaScript.',
+    title: 'JavaScript',
+    shortDescription: 'Javascript, Typescript, Next.js, React.js, Node.js',
+    stars: 5,
   },
   {
-    icon: ReactIcon,
-    title: 'React.js Development',
-    shortDescription: 'Building modern and responsive user interfaces with React.js.',
+    icon: JavaIcon,
+    title: 'Java',
+    shortDescription: 'Java, Spring Boot, Hibernate, JavaFX',
+    stars: 4,
   },
   {
-    icon: NodejsIcon,
-    title: 'Node.js Backend',
-    shortDescription: 'Developing scalable server-side applications using Node.js.',
+    icon: DatabaseIcon,
+    title: 'Databases',
+    shortDescription: 'MySQL, PostgreSQL, MongoDB, SQLite, Redis',
+    stars: 4,
   },
   {
-    icon: NextjsIcon,
-    title: 'Next.js Development',
-    shortDescription: 'Creating server-rendered React applications with Next.js.',
+    icon: PhpIcon,
+    title: 'PHP',
+    shortDescription: 'PHP, Laravel, Symfony, CodeIgniter, PHPUnit',
+    stars: 3,
   },
   {
-    icon: TypescriptIcon,
-    title: 'TypeScript Development',
-    shortDescription: 'Ensuring robust and maintainable code with TypeScript.',
+    icon: PythonIcon,
+    title: 'Python',
+    shortDescription: 'Python, Django, Flask, FastAPI, Pandas',
+    stars: 3,
   },
   {
-    icon: TailwindCSS,
-    title: 'Tailwind CSS Styling',
-    shortDescription: 'Designing beautiful and responsive interfaces with Tailwind CSS.',
+    icon: CIcon,
+    title: 'C',
+    shortDescription: 'C, C++, C#, .NET, Qt, Boost.Asio, Unity',
+    stars: 2,
   },
 ]
 
-// Skill List
-export const skillList = [
+export const languageList = [
   {
     name: 'JavaScript',
     icon: JavaScriptIcon,
