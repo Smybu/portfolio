@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardTypes> = ({ title, shortDescription, icon
       </div>
       <div className=" mt-2  flex items-center gap-1.5 ">
           {Array.from({ length: 5 }, (_, idx) => (
-            <StarIcon key={idx} className={idx < stars ? 'text-tag' : 'text-transparent'} />
+            <StarIcon key={idx} className={idx < stars ? 'text-neutral' : 'text-transparent'} />
           ))}
         </div>
     </div>
