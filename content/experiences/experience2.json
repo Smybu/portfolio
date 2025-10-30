@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "company": "DiagRAMS Technologies (Développeur Fullstack)",
+    "date": "Avril 2024 - Juin 2024",
+    "technologies": "Next.js, React, TypeScript, PostgreSQL, Terraform, CSS",
+    "presentation": ["Utilisation de React, Next.JS","Gestion de projets sur le site (CRUD)","Modification de popin","Correction de bug front et back","Ajout de filtres sur des équipements"]
+  },
+  "en": {
+    "company": "DiagRAMS Technologies (Fullstack Developer)",
+    "date": "April 2024 - June 2024",
+    "technologies": "Next.js, React, TypeScript, PostgreSQL, Terraform, CSS",
+    "presentation": ["Using React, Next.JS","Managing projects on the site (CRUD)","Modifying pop-ups","Fixing front and back bugs","Adding filters on equipment"]
+  }
+}

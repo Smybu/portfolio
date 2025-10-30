@@ -16,9 +16,9 @@ const Navbar = () => {
   const t = getDictionary(lang)
 
   const navItems = [
-  {
-    label: t.navbar_home,
-    href: `/${lang}`,
+   {
+    label: t.navbar_experiences,
+    href: `/${lang}#experiences`,
   },
   {
     label: t.navbar_skills,

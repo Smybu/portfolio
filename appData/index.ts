@@ -135,6 +135,7 @@ export const languageList = [
 
 export const footerLinks = [
   { title: { fr: "Accueil", en: "Home" }, href: "#" },
+  { title: { fr: "Expériences", en: "Experiences" }, href: "#experiences" },
   { title: { fr: "Compétences", en: "Skills" }, href: "#skills" },
   { title: { fr: "Etudes", en: "Studies" }, href: "#studies" },
 ];

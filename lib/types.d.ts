@@ -30,3 +30,15 @@ export interface LocalizedStudyContent {
 export interface Study {
   [lang: string]: LocalizedStudyContent
 }
+
+export interface LocalizedExperienceContent {
+  company: string
+  date: string
+  technologies: string
+  presentation: string[]
+}
+
+export interface Experience {
+  [lang: string]: LocalizedExperienceContent
+}
+

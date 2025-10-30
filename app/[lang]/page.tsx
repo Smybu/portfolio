@@ -4,17 +4,20 @@ import ProjectSection from '@/components/Projects/ProjectSection'
 import SkillSection from '@/components/Skills/SkillSection'
 import Languages from '@/components/Languages/Languages'
 import StudySection from '@/components/Studies/StudySection'
-import { getAllProjects, getAllStudies } from '@/services'
+import { getAllExperiences, getAllProjects, getAllStudies } from '@/services'
+import ExperienceSection from '@/components/Experiences/ExperienceSection'
 
 export default async function Home() {
   const projects = await getAllProjects()
   const studies = await getAllStudies()
+  const experiences = await getAllExperiences()
 
   return (
     <main>
       <Hero />
       <Languages languages={languageList} />
       <div className="mx-auto my-8 max-w-[1200px] px-4 md:my-[3.75rem]">
+        <ExperienceSection experiences={experiences} />
         <SkillSection />
         <StudySection studies={studies} />
         <ProjectSection projects={projects} />

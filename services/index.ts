@@ -1,4 +1,4 @@
-import { Project, Study } from '@/lib/types'
+import { Experience, Project, Study } from '@/lib/types'
 import { promises as fs } from 'fs'
 import path from 'path'
 
@@ -57,4 +57,28 @@ const getAllStudies = async (): Promise<Study[]> => {
   }
 }
 
-export { getAllProjects, getAllStudies }
+const getAllExperiences = async (): Promise<Experience[]> => {
+  try {
+    const experiencePath = path.join(process.cwd(), '/content/experiences')
+    const experienceName = await fs.readdir(experiencePath)
+
+    const experience = await Promise.all(
+      experienceName.map(async (projectName) => {
+        const filePath = path.join(experiencePath, projectName)
+        const projectDetails = await fs.readFile(filePath, 'utf8')
+        return JSON.parse(projectDetails)
+      }),
+    )
+
+    // Sort experience by date
+    experience.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+
+    return experience
+  } catch (error) {
+    // Handle errors
+    console.error('Error:', error)
+    return []
+  }
+}
+
+export { getAllProjects, getAllStudies, getAllExperiences }

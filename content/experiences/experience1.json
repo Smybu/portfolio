@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "company": "Sencrop (Développeur Frontend)",
+    "date": "Mars 2025 - Juin 2025",
+    "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
+    "presentation": ["Utilisation d'un CMS Prismic, Next.JS","Récupération de blocs CMS","Remodélisation d'un ancien site vitrine", "Récupération des données de l'ancien CMS","Travail avec une équipe Marketing et Design"]
+  },
+  "en": {
+    "company": "Sencrop (Frontend Developer)",
+    "date": "March 2025 - June 2025",
+    "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
+    "presentation": ["Using a Prismic CMS, Next.JS","Retrieving CMS blocks","Remodeling an old showcase site", "Retrieving data from the old CMS","Working with a Marketing and Design team"]
+  }
+}
