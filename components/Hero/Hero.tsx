@@ -31,13 +31,13 @@ const Hero = () => {
             <a
               href={lang === 'fr' ? "/cv/CV-WAELES-Swann.pdf" : '/cv/CV-English-WAELES-Swann.pdf'} rel="noopener noreferrer" target="_blank"
               aria-label="Connect with me"
-              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#fff]">
+              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#fff] hover:bg-accent/60 transition-colors duration-300">
               {t.hero_cv}
             </a>
             <a
               href="https://www.linkedin.com/in/swann-waeles/" target="_blank" rel="noopener noreferrer"
               aria-label="View LinkedIn Profile"
-              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
+              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm font-medium hover:bg-secondary/60 transition-colors duration-300">
               {t.hero_linkedin}
             </a>
           </div>

@@ -4,43 +4,26 @@ import { Experience } from '@/lib/types'
 import { useState } from 'react'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import ExperienceCard from './ExperienceCard'
-import { useParams } from 'next/navigation'
+import { useI18n } from '@/lib/i18nProvider'
+import { getDictionary } from '@/lib/i18n'
 
 interface ExperiencesectionProps {
   experiences: Experience[]
 }
 
-interface ExperienceSectionHeadingProps {
-  [lang: string]: {
-    title: string
-    subtitle: string
-  }
-}
-
 const ExperienceSection: React.FC<ExperiencesectionProps> = ({ experiences }) => {
   const [activeCard, setActiveCard] = useState(0)
 
-  const experienceSectionHeading: ExperienceSectionHeadingProps = {
-    fr: {
-      title: '# Expériences',
-      subtitle: "Vous pouvez retrouver mes différentes expériences professionnelles.",
-    },
-    en: {
-      title: '# Experiences',
-      subtitle: "You can find my different professional experiences.",
-    },
-  }
-
-  const lang = useParams().lang?.toString() || 'fr'
+  const { lang } = useI18n();
+  const t = getDictionary(lang)
 
   return (
     <section id="experiences" className="select-none">
       <SectionHeading
-        title={experienceSectionHeading[lang].title}
-        subtitle={experienceSectionHeading[lang].subtitle}
+        title={t.experiences_section_title}
+        subtitle={t.experiences_section_subtitle}
       />
 
-      {/* GRID à 2 colonnes max */}
       <div
         className="
           my-8 

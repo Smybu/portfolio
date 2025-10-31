@@ -1,6 +1,6 @@
 import { Project } from '@/lib/types'
 import Image from 'next/image'
-import { Earning, GithubIcon, Likes, PreviewIcon, Star, Timer } from '../../utils/icons'
+import { GithubIcon, PreviewIcon, Star } from '../../utils/icons'
 
 const IconText: React.FC<{ icon: string; text: string }> = ({ icon, text }) => (
   <li className="flex gap-2">
@@ -17,14 +17,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   const {
     title,
     shortDescription,
-    visitors,
-    earned,
     ratings,
     githubStars,
-    numberOfSales,
     livePreview,
     githubLink,
-    siteAge,
     type,
     cover,
   } = data
@@ -43,11 +39,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
             )}
           </div>
           <ul className="mt-3 flex flex-col flex-wrap gap-2 sm:flex-row sm:gap-4">
-            {(visitors || numberOfSales) && (
-              <IconText text={(visitors || numberOfSales)?.toString() || ''} icon={Likes} />
-            )}
-            {siteAge && <IconText text={siteAge} icon={Timer} />}
-            {earned && <IconText text={earned} icon={Earning} />}
             {(ratings || githubStars) && (
               <IconText text={(ratings || githubStars)?.toString() || ''} icon={Star} />
             )}

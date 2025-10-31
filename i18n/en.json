@@ -9,6 +9,7 @@
     "navbar_studies": "#Studies",
     "navbar_skills": "#Skills",
     "navbar_experiences": "#Experiences",
+    "navbar_projects": "#Projects",
     "theme_choice": "Theme choice",
     "theme_dark": "Dark",
     "theme_light": "Light",
@@ -16,5 +17,14 @@
     "error_description": "The page you are looking for does not exist or has been moved.",
     "error_home": "Back to Home",
     "footer_contact": "Contact Us",
-    "footer_languages": "Languages"
+    "footer_languages": "Languages",
+    "projets_section_title": "// Projects",
+    "projets_section_subtitle": "Here are some of my recent projects.",
+    "projets_under_construction": "🚧 Under construction... Projects will be available soon",
+    "experiences_section_title": "# Experiences",
+    "experiences_section_subtitle": "Here is an overview of my professional background.",
+    "studies_section_title": "# Studies",
+    "studies_section_subtitle": "Here is an overview of the studies I have completed.",
+    "skills_section_title": "# Skills",
+    "skills_section_subtitle": "Here are some of my technical skills."
 }

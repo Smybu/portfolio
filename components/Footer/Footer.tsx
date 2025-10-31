@@ -1,5 +1,5 @@
 "use client"
-import { footerLinks, languages } from '@/appData'
+import { footerLinks } from '@/appData'
 import { socials } from '@/appData/personal'
 import LanguageSelector from './LanguageSelector'
 import { useI18n } from '@/lib/i18nProvider'
@@ -44,7 +44,7 @@ const Footer = () => {
             <h5 className="text-neutral mb-2 text-lg font-medium">{t.footer_contact}</h5>
             <a
               href="mailto:swaeles59@gmail.com"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
+              className="text-tertiary-content hover:text-neutral text-lg font-light transition-colors duration-300 hover:underline">
               swaeles59@gmail.com
             </a>
           </div>

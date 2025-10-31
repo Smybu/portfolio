@@ -4,37 +4,20 @@ import { Study } from '@/lib/types'
 import { useRef, useState } from 'react'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import StudyCard from './StudyCard'
-import { useParams } from 'next/navigation'
+import { useI18n } from '@/lib/i18nProvider'
+import { getDictionary } from '@/lib/i18n'
 
 interface StudieSectionProps {
   studies: Study[]
-}
-
-interface StudySectionHeadingProps {
-  [lang: string]: {
-    title: string
-    subtitle: string
-  }
 }
 
 const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
   const [activeCard, setActiveCard] = useState(0)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  const studySectionHeading: StudySectionHeadingProps = {
-    fr: {
-      title: '# Études',
-      subtitle:
-        "Vous pouvez découvrir sur cette section, mon parcours scolaire. N'hésitez pas à faire défiler sur les côtés !",
-    },
-    en: {
-      title: '# Studies',
-      subtitle:
-        "You can discover my educational background in this section. Feel free to scroll sideways!",
-    },
-  }
 
-  const lang = useParams().lang?.toString() || 'fr'
+  const { lang } = useI18n();
+  const t = getDictionary(lang);
 
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
@@ -61,8 +44,8 @@ const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
   return (
     <section id="studies" className="select-none">
       <SectionHeading
-        title={studySectionHeading[lang].title}
-        subtitle={studySectionHeading[lang].subtitle}
+        title={t.studies_section_title}
+        subtitle={t.studies_section_subtitle}
       />
 
       <div

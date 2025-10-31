@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { languages } from "@/appData";
 
-// On définit un type local avec flag
 interface LanguageWithFlag {
   code: string;
   label: string;
@@ -17,7 +16,6 @@ const languagesWithFlags: LanguageWithFlag[] = languages.map((lang) => {
   return { ...lang, flag: "🏳️" };
 });
 
-// SVG pour chaque langue
 const getFlagSVG = (code: string) => {
   switch (code) {
     case "fr":
@@ -38,7 +36,6 @@ const getFlagSVG = (code: string) => {
         </svg>
       );
     case "en":
-      // Drapeau du Royaume-Uni (Union Jack)
       return (
         <svg
           width="24"

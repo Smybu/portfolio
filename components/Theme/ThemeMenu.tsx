@@ -13,7 +13,6 @@ const ThemeMenu = () => {
   const { lang } = useI18n()
   const t = getDictionary(lang)
 
-  // Mapping clé <-> nom affiché
   const themeOptions = [
     {
       key: 'light',

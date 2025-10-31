@@ -2,13 +2,11 @@ import { Experience, Project, Study } from '@/lib/types'
 import { promises as fs } from 'fs'
 import path from 'path'
 
-// Function to read project file
 const readProjectFile = async (filePath: string): Promise<Project> => {
   const projectData = await fs.readFile(filePath, 'utf8')
   return JSON.parse(projectData)
 }
 
-// Function to get all projects
 const getAllProjects = async (): Promise<Project[]> => {
   try {
     const projectsPath = path.join(process.cwd(), '/content/projects')
@@ -22,12 +20,10 @@ const getAllProjects = async (): Promise<Project[]> => {
       }),
     )
 
-    // Sort projects by priority
     projects.sort((a, b) => a.priority - b.priority)
 
     return projects
   } catch (error) {
-    // Handle errors
     console.error('Error:', error)
     return []
   }
@@ -46,12 +42,10 @@ const getAllStudies = async (): Promise<Study[]> => {
       }),
     )
 
-    // Sort studies by date
     studies.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
     return studies
   } catch (error) {
-    // Handle errors
     console.error('Error:', error)
     return []
   }
@@ -70,12 +64,10 @@ const getAllExperiences = async (): Promise<Experience[]> => {
       }),
     )
 
-    // Sort experience by date
     experience.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
     return experience
   } catch (error) {
-    // Handle errors
     console.error('Error:', error)
     return []
   }

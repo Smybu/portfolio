@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Portfolio — Swann WAELES
 
-## Getting Started
+Voici mon portfolio en Next.js, React, et Tailwind CSS, conçu pour présenter mes projets, mon parcours et mes compétences de manière claire, rapide et responsive.
 
-First, run the development server:
+**🖥️ En ligne ici →** 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Stack technique
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js — Framework React full-stack
+- Tailwind CSS — Framework CSS utilitaire pour un design rapide et moderne
+- TypeScript — Typage fort pour un code maintenable
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Déploiement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ce portfolio est déjà déployé sur Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Toute mise à jour du code sur la branche principale déclenche automatiquement un build et déploiement continu.

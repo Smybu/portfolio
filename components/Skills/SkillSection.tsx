@@ -1,43 +1,24 @@
 'use client'
 
-import { useParams } from 'next/navigation'
 import { skillData } from '../../appData'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import SkillCard from './SkillCard'
-
-interface SkillSectionHeadingProps {
-  [lang: string]: {
-    title: string
-    subtitle: string
-  }
-}
-
+import { useI18n } from '@/lib/i18nProvider'
+import { getDictionary } from '@/lib/i18n'
 
 const SkillSection = () => {
 
-  const skillSectionHeading: SkillSectionHeadingProps = {
-    fr: {
-      title: '# Compétences',
-      subtitle:
-        "Vous pouvez voir dans cette section, mes différentes compétences en développement.",
-    },
-    en: {
-      title: '# Skills',
-      subtitle:
-        "You can see in this section, my different development skills.",
-    },
-  }
-
-  const lang = useParams().lang?.toString() || 'fr'
+  const {lang} = useI18n();
+  const t = getDictionary(lang);
 
   return (
     <section id="skills" className="my-14">
       <SectionHeading
-        title={skillSectionHeading[lang].title}
-        subtitle={skillSectionHeading[lang].subtitle}
+        title={t.skills_section_title}
+        subtitle={t.skills_section_subtitle}
       />
 
-      <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 md:mt-[3.75rem] md:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 md:mt-[2.75rem] md:grid-cols-3">
         {skillData.map((skill, index) => (
           <SkillCard
             key={index}

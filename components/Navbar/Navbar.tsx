@@ -1,38 +1,39 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { BurgerIcon, CloseIcon } from '../../utils/icons'
-import Logo from './Logo'
-import { langType } from '@/app/[lang]/layout'
-import { getDictionary } from '@/lib/i18n'
-import { useI18n } from '@/lib/i18nProvider'
+import Link from "next/link";
+import { useState } from "react";
+import { BurgerIcon, CloseIcon } from "../../utils/icons";
+import Logo from "./Logo";
+import { getDictionary } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18nProvider";
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const pathname = usePathname();
-  const { lang } = useI18n()
-  const t = getDictionary(lang)
+  const [isVisible, setIsVisible] = useState(false);
+  const { lang } = useI18n();
+  const t = getDictionary(lang);
 
   const navItems = [
-   {
-    label: t.navbar_experiences,
-    href: `/${lang}#experiences`,
-  },
-  {
-    label: t.navbar_skills,
-    href: `/${lang}#skills`,
-  },
-  {
-    label: t.navbar_studies,
-    href: `/${lang}#studies`,
-  },
-]
+    {
+      label: t.navbar_experiences,
+      href: `/${lang}#experiences`,
+    },
+    {
+      label: t.navbar_skills,
+      href: `/${lang}#skills`,
+    },
+    {
+      label: t.navbar_studies,
+      href: `/${lang}#studies`,
+    },
+    {
+      label: t.navbar_projects,
+      href: `/${lang}#projects`,
+    },
+  ];
 
   const toggleMenu = () => {
-    setIsVisible(!isVisible)
-  }
+    setIsVisible(!isVisible);
+  };
 
   return (
     <nav className="bg-primary border-border h-16 overflow-hidden border-b">
@@ -41,7 +42,7 @@ const Navbar = () => {
           <div className="text-primary-content md:hidden">Menu</div>
         ) : (
           <Link href={`/${lang}`}>
-            <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static">
+            <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static hover:underline hover:text-neutral">
               <Logo />
               <span className="text-primary-content">Swann Waeles</span>
             </div>
@@ -59,15 +60,20 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
+          className={`${
+            isVisible ? "flex" : "hidden"
+          } animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}
+        >
           {navItems.map(({ label, href }) => (
             <li
               key={href}
               onClick={() => setIsVisible(false)}
-              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s lg:px-8">
+              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s lg:px-8"
+            >
               <Link
                 href={href}
-                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0`}>
+                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 hover:underline`}
+              >
                 {label}
               </Link>
             </li>
@@ -75,7 +81,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
