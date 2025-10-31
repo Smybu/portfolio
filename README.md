@@ -2,7 +2,7 @@
 
 Voici mon portfolio en Next.js, React, et Tailwind CSS, conçu pour présenter mes projets, mon parcours et mes compétences de manière claire, rapide et responsive.
 
-**🖥️ En ligne ici →** 
+**🖥️ En ligne ici → https://swann-waeles.vercel.app/** 
 
 ## 🚀 Stack technique
 
