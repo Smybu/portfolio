@@ -1,28 +1,23 @@
-import { Experience, Project, Study } from '@/lib/types'
+import { Experience, ProjectType, Study } from '@/lib/types'
 import { promises as fs } from 'fs'
 import path from 'path'
 
-const readProjectFile = async (filePath: string): Promise<Project> => {
-  const projectData = await fs.readFile(filePath, 'utf8')
-  return JSON.parse(projectData)
-}
-
-const getAllProjects = async (): Promise<Project[]> => {
+const getAllProjects = async (): Promise<ProjectType[]> => {
   try {
     const projectsPath = path.join(process.cwd(), '/content/projects')
-    const projectsName = await fs.readdir(projectsPath)
+    const studiesName = await fs.readdir(projectsPath)
 
-    const projects = await Promise.all(
-      projectsName.map(async (projectName) => {
+    const studies = await Promise.all(
+      studiesName.map(async (projectName) => {
         const filePath = path.join(projectsPath, projectName)
-        const projectDetails = await readProjectFile(filePath)
-        return projectDetails
+        const projectDetails = await fs.readFile(filePath, 'utf8')
+        return JSON.parse(projectDetails)
       }),
     )
 
-    projects.sort((a, b) => a.priority - b.priority)
+    studies.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
-    return projects
+    return studies
   } catch (error) {
     console.error('Error:', error)
     return []
