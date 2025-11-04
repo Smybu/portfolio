@@ -1,19 +1,14 @@
-import { FC, HTMLAttributes, RefObject } from 'react'
+import { forwardRef, SVGProps } from "react";
 
-interface EllipseProps extends HTMLAttributes<SVGElement> {
-  ref: RefObject<SVGSVGElement>
-}
-
-const Ellipse: FC<EllipseProps> = ({ ref, ...props }) => {
-  return (
+const Ellipse = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
+  (props, ref) => (
     <svg
       ref={ref}
-      width="412"
-      height="413"
       viewBox="0 0 412 413"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <circle
         cx="206"
         cy="206.401"
@@ -25,6 +20,8 @@ const Ellipse: FC<EllipseProps> = ({ ref, ...props }) => {
       />
     </svg>
   )
-}
+);
 
-export default Ellipse
+Ellipse.displayName = "Ellipse";
+
+export default Ellipse;

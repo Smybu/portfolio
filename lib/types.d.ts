@@ -1,17 +1,14 @@
 export interface Project {
   title: string
   shortDescription: string
-  priority: number
-  cover: string
-  livePreview?: string
-  githubLink?: string
-  visitors?: string
-  earned?: string
-  githubStars?: string
-  ratings?: string
-  numberOfSales?: string
+  technologies: string
+  githubLink: string
   type: string
-  siteAge?: string
+  year: string
+}
+
+export interface ProjectType{
+  [lang: string]: Project
 }
 
 export interface Heading {
