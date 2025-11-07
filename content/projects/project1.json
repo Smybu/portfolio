@@ -4,7 +4,6 @@
     "shortDescription": "Un projet scolaire en équipe de 7 mélangeant 2 promotions (INFO et MMI) pour la construction d'un site web en 48h.",
     "technologies": "PHP, Laravel, Blade, HTML, CSS, JavaScript",
     "githubLink": "https://github.com/Smybu/Marathon-web",
-    "type": "Nouveau 🔥",
     "year": "2023"
   },
   "en": {
@@ -12,7 +11,6 @@
     "shortDescription": "A school project in a team of 7 mixing 2 promotions (INFO and MMI) to build a website in 48 hours.",
     "technologies": "PHP, Laravel, Blade, HTML, CSS, JavaScript",
     "githubLink": "https://github.com/Smybu/Marathon-web",
-    "type": "New 🔥",
     "year": "2023"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "fr": {
+    "title": "Projet Vibrations",
+    "shortDescription": "Un projet scolaire en équipe de 4 pour créer un système de maintenance prédictives des vibrations de moteurs.",
+    "technologies": "C++, Node.js, Javascript, MQTT, Raspberry, ESP32",
+    "githubLink": "https://github.com/Smybu/ProjetVibrations",
+    "year": "2023"
+  },
+  "en": {
+    "title": "Vibrations Project",
+    "shortDescription": "A school project in a team of 4 to create a predictive maintenance system for motor vibrations.",
+    "technologies": "C++, Node.js, Javascript, MQTT, Raspberry, ESP32",
+    "githubLink": "https://github.com/Smybu/ProjetVibrations",
+    "year": "2023"
+  }
+}

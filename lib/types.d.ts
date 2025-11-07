@@ -3,7 +3,7 @@ export interface Project {
   shortDescription: string
   technologies: string
   githubLink: string
-  type: string
+  type?: string
   year: string
 }
 
