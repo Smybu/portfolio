@@ -1,0 +1,16 @@
+{
+  "fr": {
+    "title": " Jeu 2048",
+    "shortDescription": "Jeu 2048 réalisé en 2h sur Next.js",
+    "technologies": "Next.js, React, Typescript, Tailwind CSS",
+    "githubLink": "https://github.com/Smybu/2048Game",
+    "year": "2025"
+  },
+  "en": {
+    "title": "2048 Game",
+    "shortDescription": "2048 game made in 2 hours using Next.js",
+    "technologies": "Next.js, React, Typescript, Tailwind CSS",
+    "githubLink": "https://github.com/Smybu/2048Game",
+    "year": "2025"
+  }
+}
