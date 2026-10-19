@@ -22,13 +22,13 @@ export const skillData = [
   {
     icon: JavaIcon,
     title: "Java",
-    shortDescription: "Java, Spring Boot, Hibernate, JavaFX",
+    shortDescription: "Java, Spring Boot, JUnit, Maven",
     stars: 4,
   },
   {
     icon: DatabaseIcon,
     title: "Databases",
-    shortDescription: "MySQL, PostgreSQL, MongoDB, SQLite, Redis",
+    shortDescription: "MySQL, PostgreSQL, MongoDB, SQLite",
     stars: 4,
   },
   {
@@ -40,13 +40,13 @@ export const skillData = [
   {
     icon: PythonIcon,
     title: "Python",
-    shortDescription: "Python, Django, Flask, FastAPI, Pandas",
+    shortDescription: "Python, Django, Flask, FastAPI",
     stars: 3,
   },
   {
     icon: CIcon,
     title: "C",
-    shortDescription: "C, C++, C#, .NET, Qt, Boost.Asio, Unity",
+    shortDescription: "C, C++",
     stars: 2,
   },
 ];

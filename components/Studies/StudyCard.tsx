@@ -30,9 +30,9 @@ const StudyCard: FC<StudyCardProps> = ({ study, handleActiveCard }) => {
   return (
     <div
   ref={cardRef}
-  className="bg-secondary border-border border-primary-content flex max-w-full shrink-0 flex-col rounded-2xl border p-4 text-center sm:max-w-[425px]"
+  className="bg-secondary border-border border-primary-content flex w-full flex-col rounded-2xl border p-4 text-center md:min-w-0 md:flex-1"
 >
-  <div className="flex flex-col items-center gap-2 min-h-[120px]">
+  <div className="flex flex-col items-center gap-2">
     <div className="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-xl border border-border bg-white shadow-sm">
       <Image
         src={institution}

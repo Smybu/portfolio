@@ -1,14 +1,14 @@
 {
   "fr": {
-    "company": "Sencrop (Développeur Frontend)",
-    "date": "Mars 2025 - Juin 2025",
-    "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
-    "presentation": ["Utilisation d'un CMS Prismic, Next.JS","Récupération de blocs CMS","Remodélisation d'un ancien site vitrine", "Récupération des données de l'ancien CMS","Travail avec une équipe Marketing et Design"]
+    "company": "Service Civique - Maison Nord Solidarités (Accompagnateur Numérique)",
+    "date": "Novembre 2025 - Juillet 2026",
+    "technologies": "Communication, Accompagnement, Formation",
+    "presentation": ["Réalisation d'ateliers pour des personnes en difficulté numériquement","Création de documents explicatifs sur des nouveaux outils au sein de l'organisme (Teams, Copilot)"," Suivi régulier de personnes pour des problèmes administratifs"]
   },
   "en": {
-    "company": "Sencrop (Frontend Developer)",
-    "date": "March 2025 - June 2025",
-    "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
-    "presentation": ["Using a Prismic CMS, Next.JS","Retrieving CMS blocks","Remodeling an old showcase site", "Retrieving data from the old CMS","Working with a Marketing and Design team"]
+    "company": "Civic Service - Maison Nord Solidarités (Digital Accompanist)",
+    "date": "November 2025 - July 2026",
+    "technologies": "Communication, Accompaniment, Training",
+    "presentation": ["Conducting workshops for individuals facing digital challenges","Creating explanatory documents for new tools within the organization (Teams, Copilot)","Regular follow-up with individuals for administrative issues"]
   }
 }

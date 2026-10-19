@@ -1,14 +1,14 @@
 {
   "fr": {
-    "degree": "BTS Informatique",
-    "date": "2021 - 2023",
-    "degreeDetails": "BTS Systèmes Numériques option A Informatique et Réseaux",
-    "institution": "/logo-bts.png"
+    "degree": "Bac Général",
+    "date": "2018 - 2021",
+    "degreeDetails": "Spécialités : Mathématiques, Physique-Chimie, Numérique et Sciences Informatiques",
+    "institution": "/logo-lycée.png"
   },
   "en": {
-    "degree": "BTS in Computer Science",
-    "date": "2021 - 2023",
-    "degreeDetails": "BTS Digital Systems, option A Computer Science and Networks",
-    "institution": "/logo-bts.png"
+    "degree": "General Baccalaureate",
+    "date": "2018 - 2021",
+    "degreeDetails": "Specializations in Mathematics, Physics-Chemistry, Digital and Computer Sciences",
+    "institution": "/logo-lycée.png"
   }
 }

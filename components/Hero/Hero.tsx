@@ -36,7 +36,7 @@ const Hero = () => {
               href={
                 lang === "fr"
                   ? "/cv/CV-WAELES-Swann.pdf"
-                  : "/cv/CV-English-WAELES-Swann.pdf"
+                  : "/cv/CV-WAELES-Swann-English.pdf"
               }
               rel="noopener noreferrer"
               target="_blank"

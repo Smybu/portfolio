@@ -1,14 +1,14 @@
 {
   "fr": {
-    "degree": "Mastère",
-    "date": "2025 - Présent",
-    "degreeDetails": "Mastère CTO & Tech Lead 100% en ligne (alternance)",
-    "institution": "/logo-studi.png"
+    "degree": "BUT Informatique",
+    "date": "2023 - 2025",
+    "degreeDetails": "Réalisation d'applications : conception, développement, validation (formation initiale)",
+    "institution": "/logo-iut.png"
   },
   "en": {
-    "degree": "Master's degree",
-    "date": "2025 - Present",
-    "degreeDetails": "Master's degree CTO & Tech Lead 100% online (work-study)",
-    "institution": "/logo-studi.png"
+    "degree": "Bachelor of Technology",
+    "date": "2023 - 2025",
+    "degreeDetails": "Application Development track: design, development, validation (initial training)",
+    "institution": "/logo-iut.png"
   }
 }

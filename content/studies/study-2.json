@@ -1,14 +1,14 @@
 {
   "fr": {
-    "degree": "BUT Informatique",
-    "date": "2023 - 2025",
-    "degreeDetails": "BUT informatique parcours réalisation d'applications : conception, développement, validation (formation initiale)",
-    "institution": "/logo-iut.png"
+    "degree": "BTS Informatique",
+    "date": "2021 - 2023",
+    "degreeDetails": "Option A Informatique et Réseaux",
+    "institution": "/logo-bts.png"
   },
   "en": {
-    "degree": "Bachelor of Technology",
-    "date": "2023 - 2025",
-    "degreeDetails": "Bachelor of Technology in Computer Science, Application Development track: design, development, validation (initial training)",
-    "institution": "/logo-iut.png"
+    "degree": "BTS in Computer Science",
+    "date": "2021 - 2023",
+    "degreeDetails": "Option A Computer Science and Networks",
+    "institution": "/logo-bts.png"
   }
 }
