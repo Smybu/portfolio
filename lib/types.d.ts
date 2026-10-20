@@ -33,6 +33,7 @@ export interface LocalizedExperienceContent {
   date: string
   technologies: string
   presentation: string[]
+  popin: string[]
 }
 
 export interface Experience {

@@ -1,5 +1,7 @@
 'use client'
 
+import { getDictionary } from '@/lib/i18n'
+import { useI18n } from '@/lib/i18nProvider'
 import { Experience } from '@/lib/types'
 import { isInViewport } from '@/utils'
 import { useParams } from 'next/navigation'
@@ -17,9 +19,10 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
   const cardRef = useRef<HTMLDivElement>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const lang = useParams().lang?.toString() || 'fr'
+  const { lang } = useI18n();
+  const t = getDictionary(lang)
 
-  const { company, date, technologies, presentation } = experience[lang]
+  const { company, date, technologies, presentation, popin } = experience[lang]
 
   useEffect(() => {
     let observer: IntersectionObserver | undefined
@@ -55,7 +58,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
             {(Array.isArray(presentation)
               ? presentation
               : [presentation]
-            ).slice(0, 3).map((item, idx) => (
+            ).map((item, idx) => (
               <li key={idx} className="leading-6">
                 {item}
               </li>
@@ -68,7 +71,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
           onClick={() => setIsModalOpen(true)}
           className="cursor-pointer bg-primary text-primary-content hover:bg-accent hover:text-white mt-5 rounded-xl px-4 py-2 text-sm font-semibold transition-colors"
         >
-          En savoir plus
+          {t.experiences_more_information}
         </button>
       </div>
 
@@ -106,10 +109,15 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 
             <div>
               <p className="text-neutral text-center mt-2 text-base sm:text-left">
-                Lors de mon service civique à la Maison Nord Solidarités d'Hazebrouck, j'ai occupé le rôle d'accompagnateur numérique. Cette expérience m'a permis d'aider des personnes en difficulté avec les outils informatiques et de les accompagner dans leurs démarches administratives en ligne.<br/><br/>
-                J'ai notamment animé des ateliers d'initiation et d'accompagnement numérique en petit groupe afin de favoriser l'autonomie des usagers dans l'utilisation des outils informatiques. J'ai également conçu des documents explicatifs pour faciliter la prise en main de nouveaux outils utilisés pour les personnes de la structure, tels que Microsoft Teams et Copilot.<br/><br/>
-                Enfin, j'ai assuré un suivi régulier auprès de plusieurs personnes rencontrant des difficultés dans leurs démarches administratives, en leur apportant une aide adaptée à leurs besoins grâce à la table numérique présente à l'accueil.<br/><br/>
-                Cette expérience m'a permis de développer mes compétences en communication, en pédagogie et en assistance informatique, tout en renforçant mon sens de l'écoute, ma patience et ma capacité à m'adapter à différents publics.</p>
+                {(Array.isArray(popin)
+                  ? popin
+                  : [popin]
+                ).map((experience, idx) => (
+                  <span key={idx} className="block mb-2">
+                    {experience}
+                  </span>
+                ))}
+              </p>
             </div>
 
             <button
@@ -117,7 +125,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
               onClick={() => setIsModalOpen(false)}
               className="bg-primary cursor-pointer text-primary-content hover:bg-accent hover:text-white mt-8 w-full rounded-xl px-4 py-3 font-semibold transition-colors"
             >
-              Fermer
+              {t.experiences_more_information_close}
             </button>
           </div>
         </div>

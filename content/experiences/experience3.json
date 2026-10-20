@@ -3,12 +3,20 @@
     "company": "Stage - DiagRAMS Technologies (Développeur Fullstack)",
     "date": "Avril 2024 - Juin 2024",
     "technologies": "Next.js, React, TypeScript, PostgreSQL, Terraform, CSS",
-    "presentation": ["Utilisation de React, Next.JS","Gestion de projets sur le site (CRUD)","Modification de popin","Correction de bug front et back","Ajout de filtres sur des équipements"]
+    "presentation": ["Utilisation de React, Next.JS","Gestion de projets sur le site (CRUD)","Modification de popin","Correction de bug front et back","Ajout de filtres sur des équipements"],
+    "popin": ["Lors de mon stage chez DiagRAMS TECHNOLOGIES, j'ai occupé le poste de développeur Full-stack, où j'ai participé à l'évolution et à la maintenance d'une application web. Cette expérience m'a permis de travailler sur des fonctionnalités existantes, d'améliorer l'expérience utilisateur et de contribuer à la résolution de problèmes techniques, aussi bien côté Front-end que Back-end.",
+    "J'ai notamment utilisé React et Next.js pour développer et modifier des fonctionnalités de l'application. J'ai réalisé un CRUD pour une gestion de projets présents sur l'application. J'ai créé la base de données, les réponses API, ainsi que les différentes pages appelant les requêtes API.",
+    "Outre le CRUD, j'ai réalisé d'autres petites tâches, comme la création d'un popin pour afficher des valeurs de moteurs, l'ajout d'un filtre pour la section Equipements selon le nom et la date et j'ai également corrigé des bugs d'affichage côté Front et un problème sur une table côté Back.",
+    "Ce stage m'a permis de renforcer mes compétences en développement Full-stack, en maintenance applicative et en résolution de problèmes, tout en approfondissant ma compréhension du fonctionnement d'une application web et de son évolution au sein d'un environnement professionnel."]
   },
   "en": {
     "company": "Internship - DiagRAMS Technologies (Fullstack Developer)",
     "date": "April 2024 - June 2024",
     "technologies": "Next.js, React, TypeScript, PostgreSQL, Terraform, CSS",
-    "presentation": ["Using React, Next.JS","Managing projects on the site (CRUD)","Modifying pop-ups","Fixing front and back bugs","Adding filters on equipment"]
+    "presentation": ["Using React, Next.JS","Managing projects on the site (CRUD)","Modifying pop-ups","Fixing front and back bugs","Adding filters on equipment"],
+    "popin": ["During my internship at DiagRAMS TECHNOLOGIES, I held the position of Full-stack Developer, where I contributed to the evolution and maintenance of a web application. This experience allowed me to work on existing features, enhance user experience, and address technical issues on both the Front-end and Back-end.",
+    "I specifically utilized React and Next.js to develop and modify application features. I implemented a  CRUD for managing projects within the application, creating the database, API responses, and the various pages that call the API requests.",
+    "In addition to the CRUD, I completed other tasks such as creating a pop-up to display engine values, adding a filter for the Equipment section based on name and date, and fixing display bugs on the Front-end as well as an issue with a table on the Back-end.",
+    "This internship allowed me to strengthen my Full-stack development skills, application maintenance, and problem-solving abilities, while deepening my understanding of how a web application functions and evolves within a professional environment."]
   }
 }

@@ -3,12 +3,20 @@
     "company": "Service Civique - Maison Nord Solidarités (Accompagnateur Numérique)",
     "date": "Novembre 2025 - Juillet 2026",
     "technologies": "Communication, Accompagnement, Formation",
-    "presentation": ["Réalisation d'ateliers pour des personnes en difficulté numériquement","Création de documents explicatifs sur des nouveaux outils au sein de l'organisme (Teams, Copilot)"," Suivi régulier de personnes pour des problèmes administratifs"]
+    "presentation": ["Réalisation d'ateliers pour des personnes en difficulté numériquement","Création de documents explicatifs sur des nouveaux outils au sein de l'organisme (Teams, Copilot)"," Suivi régulier de personnes pour des problèmes administratifs"],
+    "popin": ["Lors de mon service civique à la Maison Nord Solidarités d'Hazebrouck, j'ai occupé le rôle d'accompagnateur numérique. Cette expérience m'a permis d'aider des personnes en difficulté avec les outils informatiques et de les accompagner dans leurs démarches administratives en ligne.",
+  "J'ai notamment animé des ateliers d'initiation et d'accompagnement numérique en petit groupe afin de favoriser l'autonomie des usagers dans l'utilisation des outils informatiques. J'ai également conçu des documents explicatifs pour faciliter la prise en main de nouveaux outils utilisés pour les personnes de la structure, tels que Microsoft Teams et Copilot.",
+  "Enfin, j'ai assuré un suivi régulier auprès de plusieurs personnes rencontrant des difficultés dans leurs démarches administratives, en leur apportant une aide adaptée à leurs besoins grâce à la table numérique présente à l'accueil.",
+  "Cette expérience m'a permis de développer mes compétences en communication, en pédagogie et en assistance informatique, tout en renforçant mon sens de l'écoute, ma patience et ma capacité à m'adapter à différents publics."]
   },
   "en": {
     "company": "Civic Service - Maison Nord Solidarités (Digital Accompanist)",
     "date": "November 2025 - July 2026",
     "technologies": "Communication, Accompaniment, Training",
-    "presentation": ["Conducting workshops for individuals facing digital challenges","Creating explanatory documents for new tools within the organization (Teams, Copilot)","Regular follow-up with individuals for administrative issues"]
+    "presentation": ["Conducting workshops for individuals facing digital challenges","Creating explanatory documents for new tools within the organization (Teams, Copilot)","Regular follow-up with individuals for administrative issues"],
+    "popin": ["During my civic service at Maison Nord Solidarités in Hazebrouck, I served as a digital accompanist. This experience allowed me to assist individuals struggling with digital tools and guide them through online administrative processes.",
+  "I conducted small group workshops to promote users' autonomy in using digital tools. I also created explanatory documents to facilitate the adoption of new tools used within the organization, such as Microsoft Teams and Copilot.",
+  "Additionally, I provided regular follow-up support to several individuals facing difficulties with administrative procedures, offering tailored assistance based on their needs through the digital table available at the reception.",
+  "This experience enabled me to develop my communication, pedagogy, and IT support skills while enhancing my listening abilities, patience, and adaptability to different audiences."]
   }
 }

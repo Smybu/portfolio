@@ -3,12 +3,20 @@
     "company": "Stage - Sencrop (Développeur Frontend)",
     "date": "Mars 2025 - Juin 2025",
     "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
-    "presentation": ["Utilisation d'un CMS Prismic, Next.JS","Récupération de blocs CMS","Remodélisation d'un ancien site vitrine", "Récupération des données de l'ancien CMS","Travail avec une équipe Marketing et Design"]
+    "presentation": ["Utilisation d'un CMS Prismic, Next.JS","Récupération de blocs CMS","Remodélisation d'un ancien site vitrine", "Récupération des données de l'ancien CMS","Travail avec une équipe Marketing et Design"],
+    "popin": ["Lors de mon stage chez SENCROP, j'ai occupé le poste de développeur Front-end, où j'ai participé à la refonte du site vitrine de l'entreprise afin de changer le CMS utilisé (Gatsby vers Prismic. Cette expérience m'a permis de mettre en pratique mes compétences en développement web et de découvrir les CMS.",
+    "J'ai notamment travaillé avec Next.js et le CMS Prismic pour récupérer, intégrer et reproduire les composants appelés blocs de l'ancien CMS. J'ai corrigé les différences de syntaxes dans le code entre les 2 CMS et aussi la mise en place des différentes langues du site.",
+    "J'ai également collaboré avec les équipes Marketing et Design afin de réaliser de nouveaux blocs pour augmenter la diversité des blocs et améliorer également d'anciens blocs qui n'étaient plus à jour.",
+    "Ce stage m'a permis de renforcer mes compétences en développement Front-end, en intégration de contenus via un CMS et en travail d'équipe, tout en découvrant les méthodes de collaboration entre les équipes techniques, marketing et design dans un environnement professionnel."]
   },
   "en": {
     "company": "Internship - Sencrop (Frontend Developer)",
     "date": "March 2025 - June 2025",
     "technologies": "Next.js, React, TypeScript, Prismic, ContentFul, CSS",
-    "presentation": ["Using a Prismic CMS, Next.JS","Retrieving CMS blocks","Remodeling an old showcase site", "Retrieving data from the old CMS","Working with a Marketing and Design team"]
+    "presentation": ["Using a Prismic CMS, Next.JS","Retrieving CMS blocks","Remodeling an old showcase site", "Retrieving data from the old CMS","Working with a Marketing and Design team"],
+    "popin": ["During my internship at SENCROP, I held the position of Front-end Developer, where I participated in the redesign of the company's showcase website to change the CMS used (Gatsby to Prismic). This experience allowed me to apply my web development skills and discover CMS platforms.",
+    "I specifically worked with Next.js and the Prismic CMS to retrieve, integrate, and reproduce components called blocks from the old CMS. I corrected syntax differences in the code between the two CMS platforms and also implemented the different languages of the site.",
+    "I also collaborated with the Marketing and Design teams to create new blocks to increase the diversity of blocks and improve outdated ones.",
+    "This internship allowed me to strengthen my Front-end development skills, content integration via a CMS, and teamwork, while also discovering the collaboration methods between technical, marketing, and design teams in a professional environment."]
   }
 }
