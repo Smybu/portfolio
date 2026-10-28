@@ -1,0 +1,16 @@
+{
+  "fr": {
+    "title": "Projet Envoi Mail Epic Games",
+    "shortDescription": "Un projet qui consiste à m'envoyer un mail automatisé pour me partager tous les jeux gratuits sur la plateforme Epic Games.",
+    "technologies": "Python, YAML, Github Actions, HTML, CSS",
+    "githubLink": "https://github.com/Smybu/epic-free-games",
+    "year": "2026"
+  },
+  "en": {
+    "title": "Epic Games Mail Sending Project",
+    "shortDescription": "A project that involves sending automated emails to share all free games available on the Epic Games platform.",
+    "technologies": "Python, YAML, Github Actions, HTML, CSS",
+    "githubLink": "https://github.com/Smybu/epic-free-games",
+    "year": "2026"
+  }
+}
