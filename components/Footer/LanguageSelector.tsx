@@ -1,7 +1,14 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { languages } from "@/appData";
+import { ArrowIcon, CheckIcon, EnglishIcon, FrenchIcon } from "@/utils/icons";
+import { useRouter } from "next/navigation";
+import React, {
+  KeyboardEvent,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react";
 
 interface LanguageWithFlag {
   code: string;
@@ -16,48 +23,18 @@ const languagesWithFlags: LanguageWithFlag[] = languages.map((lang) => {
   return { ...lang, flag: "🏳️" };
 });
 
-const getFlagSVG = (code: string) => {
+const getFlag = (code: string, emoji: string) => {
   switch (code) {
     case "fr":
-      return (
-        <svg
-          width="24"
-          height="16"
-          viewBox="0 0 24 16"
-          style={{
-            borderRadius: "3px",
-            boxShadow: "0 0 1px #aaa",
-            flexShrink: 0,
-          }}
-        >
-          <rect width="8" height="16" fill="#0055A4" />
-          <rect x="8" width="8" height="16" fill="#fff" />
-          <rect x="16" width="8" height="16" fill="#EF4135" />
-        </svg>
-      );
+      return <FrenchIcon />;
     case "en":
-      return (
-        <svg
-          width="24"
-          height="16"
-          viewBox="0 0 24 16"
-          style={{
-            borderRadius: "3px",
-            boxShadow: "0 0 1px #aaa",
-            flexShrink: 0,
-          }}
-        >
-          <rect width="24" height="16" fill="#012169" />
-          <path d="M0 0L24 16M24 0L0 16" stroke="#fff" strokeWidth="3" />
-          <path d="M0 0L24 16M24 0L0 16" stroke="#C8102E" strokeWidth="1.5" />
-          <rect x="10" width="4" height="16" fill="#fff" />
-          <rect y="6" width="24" height="4" fill="#fff" />
-          <rect x="11" width="2" height="16" fill="#C8102E" />
-          <rect y="7" width="24" height="2" fill="#C8102E" />
-        </svg>
-      );
+      return <EnglishIcon />;
     default:
-      return null;
+      return (
+        <span aria-hidden="true" className="w-6 text-center leading-none">
+          {emoji}
+        </span>
+      );
   }
 };
 
@@ -67,90 +44,144 @@ type LanguageSelectorProps = {
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({ current }) => {
   const router = useRouter();
+  const listId = useId();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const selectedIndex = Math.max(
+    0,
+    languagesWithFlags.findIndex((l) => l.code === current),
+  );
+  const selected = languagesWithFlags[selectedIndex];
+
   const [open, setOpen] = useState(false);
-  const selected = languagesWithFlags.find((l) => l.code === current);
-  const ref = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(selectedIndex);
+
+  const optionId = (i: number) => `${listId}-option-${i}`;
 
   useEffect(() => {
+    if (!open) return;
     const handleClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setOpen(false);
       }
     };
-    if (open) document.addEventListener("mousedown", handleClick);
+    document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [open]);
 
+  const openMenu = () => {
+    setActiveIndex(selectedIndex);
+    setOpen(true);
+  };
+
   const handleSelect = (code: string) => {
     setOpen(false);
+    buttonRef.current?.focus();
     if (code !== current) router.push(`/${code}`);
   };
 
+  const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
+    const last = languagesWithFlags.length - 1;
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        if (!open) openMenu();
+        else setActiveIndex((i) => (i >= last ? 0 : i + 1));
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        if (!open) openMenu();
+        else setActiveIndex((i) => (i <= 0 ? last : i - 1));
+        break;
+      case "Home":
+        if (open) {
+          e.preventDefault();
+          setActiveIndex(0);
+        }
+        break;
+      case "End":
+        if (open) {
+          e.preventDefault();
+          setActiveIndex(last);
+        }
+        break;
+      case "Enter":
+      case " ":
+        if (open) {
+          e.preventDefault();
+          handleSelect(languagesWithFlags[activeIndex].code);
+        }
+        break;
+      case "Escape":
+        if (open) {
+          e.preventDefault();
+          setOpen(false);
+        }
+        break;
+      case "Tab":
+        setOpen(false);
+        break;
+    }
+  };
+
   return (
-    <div
-      ref={ref}
-      style={{ position: "relative", minWidth: 150, maxWidth: 140 }}
-    >
+    <div ref={containerRef} className="relative w-full min-w-40 max-w-52">
       <button
+        ref={buttonRef}
         type="button"
-        className="border border-gray-300 rounded px-3 py-1 bg-white flex items-center gap-2 w-full focus:outline-none focus:ring-2 focus:ring-primary/50"
-        style={{
-          color: "var(--gradient-start)",
-        }}
-        onClick={() => setOpen((v) => !v)}
+        role="combobox"
         aria-haspopup="listbox"
         aria-expanded={open}
+        aria-controls={listId}
+        aria-activedescendant={open ? optionId(activeIndex) : undefined}
+        onClick={() => (open ? setOpen(false) : openMenu())}
+        onKeyDown={handleKeyDown}
+        className={`bg-primary text-neutral focus-visible:ring-accent flex w-full cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none ${
+          open ? "border-accent" : "border-border hover:border-accent/60"
+        }`}
       >
-        {selected && getFlagSVG(selected.code)}
-        <span>{selected?.label}</span>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 20 20"
-          fill="none"
-          style={{ flexShrink: 0 }}
-        >
-          <path
-            d="M5 8l5 5 5-5"
-            stroke="#888"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        {selected && getFlag(selected.code, selected.flag)}
+        <span className="flex-1 text-left">{selected?.label}</span>
+        <ArrowIcon open={open} />
       </button>
-      {open && (
-        <ul
-          className="absolute left-0 z-10 mt-1 w-full bg-white border border-gray-200 rounded shadow-lg"
-          style={{
-            listStyle: "none",
-            padding: 0,
-            margin: 0,
-            color: "var(--gradient-start)",
-          }}
-          role="listbox"
-        >
-          {languagesWithFlags.map((lang) => (
+
+      <ul
+        id={listId}
+        role="listbox"
+        className={`bg-primary border-border absolute left-0 z-30 mt-2 w-full origin-top overflow-hidden rounded-xl border p-1 shadow-xl shadow-black/30 transition-all duration-200 ease-out ${
+          open
+            ? "visible translate-y-0 scale-100 opacity-100"
+            : "pointer-events-none invisible -translate-y-1 scale-95 opacity-0"
+        }`}
+      >
+        {languagesWithFlags.map((lang, i) => {
+          const isSelected = lang.code === current;
+          return (
             <li
               key={lang.code}
-              className={`flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-purple-300 ${
-                lang.code === current ? "bg-gray-100" : ""
-              }`}
-              onClick={() => handleSelect(lang.code)}
+              id={optionId(i)}
               role="option"
-              aria-selected={lang.code === current}
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ")
-                  handleSelect(lang.code);
-              }}
+              aria-selected={isSelected}
+              onClick={() => handleSelect(lang.code)}
+              onMouseEnter={() => setActiveIndex(i)}
+              className={`text-neutral flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors duration-150 ${
+                i === activeIndex ? "bg-accent/20" : ""
+              } ${isSelected ? "font-semibold" : ""}`}
             >
-              {getFlagSVG(lang.code)}
-              <span>{lang.label}</span>
+              {getFlag(lang.code, lang.flag)}
+              <span className="flex-1">{lang.label}</span>
+              {isSelected && (
+                <CheckIcon />
+              )}
             </li>
-          ))}
-        </ul>
-      )}
+          );
+        })}
+      </ul>
     </div>
   );
 };
