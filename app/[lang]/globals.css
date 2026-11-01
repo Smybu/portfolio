@@ -34,6 +34,7 @@
   --gradient-end: #d9c2e9;
 }
 
+
 @theme {
   --color-primary: var(--p);
   --color-primary-content: var(--pc);
@@ -86,9 +87,18 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   scrollbar-width: none;
-  ::-webkit-scrollbar { display: none; }
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

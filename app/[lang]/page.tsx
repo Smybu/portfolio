@@ -16,7 +16,7 @@ export default async function Home() {
     <main>
       <Hero />
       <Languages languages={languageList} />
-      <div className="mx-auto my-8 max-w-[1200px] px-4 md:my-[3.75rem]">
+      <div className="mx-auto my-8 max-w-[1200px] px-4 md:my-15">
         <ExperienceSection experiences={experiences} />
         <SkillSection />
         <StudySection studies={studies} />
