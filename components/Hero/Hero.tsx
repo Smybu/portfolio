@@ -1,20 +1,29 @@
 "use client";
+import useFloat from "@/hooks/useFloat";
+import useParallaxTilt from "@/hooks/useParallaxTilt";
 import useRoleSwitcher from "@/hooks/useRoleSwitcher";
-import useRotatingAnimation from "@/hooks/useRotatingAnimation";
-import Image from "next/image";
-import { HeroImage } from "../../utils/images";
-import Ellipse from "./Ellipse";
 import { getDictionary } from "@/lib/i18n";
 import { useI18n } from "@/lib/i18nProvider";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { HeroImage } from "../../utils/images";
+import FloatingChip, { FLOATING_CHIPS } from "./FloatingChips";
 
 const Hero = () => {
   const { lang } = useI18n();
   const t = getDictionary(lang);
 
-  const ellipseRef = useRotatingAnimation();
-  const role = useRoleSwitcher({
-    roles: [t.role_fullstack, t.role_unemployed],
-  });
+  const roles = [t.role_fullstack, t.role_unemployed];
+  const { text: role, isTyping } = useRoleSwitcher({ roles });
+
+  const stageRef = useParallaxTilt<HTMLDivElement>();
+  const floatRef = useFloat<HTMLDivElement>({ amplitude: 14, duration: 3400 });
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   return (
     <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
@@ -24,8 +33,17 @@ const Hero = () => {
             <span className="text-neutral mb-2 block text-3xl font-bold">
               {t.welcome}
             </span>
-            <span className="text-accent block text-[1.75rem] font-bold">
-              {role}
+
+            <span className="text-accent block min-h-9 text-[1.75rem] font-bold">
+              <span className="sr-only">{roles.join(", ")}</span>
+
+              <span aria-hidden="true">{role}</span>
+              <span
+                aria-hidden="true"
+                className={`bg-accent ml-1 inline-block h-[1.1em] w-[3px] translate-y-[0.18em] rounded-sm ${
+                  isTyping ? "" : "motion-safe:animate-blink"
+                }`}
+              />
             </span>
           </h1>
 
@@ -57,20 +75,46 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex min-h-[18.75rem] items-center justify-center lg:min-h-[35rem]">
-          <div className="relative flex items-center justify-center text-accent size-56 sm:size-60 md:size-[20rem] lg:size-[25.75rem]">
-            <Image
-              src={HeroImage}
-              fill
-              priority
-              sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
-              alt="Swann Waeles"
-              className="object-contain p-7"
-            />
-            <Ellipse
-              ref={ellipseRef}
-              className="absolute inset-0 m-auto size-full transition-transform duration-500 ease-out"
-            />
+        <div
+          ref={stageRef}
+          className="flex min-h-[18.75rem] items-center justify-center lg:min-h-[35rem]"
+        >
+          <div className="relative size-56 sm:size-60 md:size-[20rem] lg:size-[25.75rem]">
+            <div
+              aria-hidden="true"
+              className={`absolute inset-4 motion-safe:transition-opacity motion-safe:duration-1000 ${
+                mounted ? "opacity-100" : "motion-safe:opacity-0"
+              }`}
+              style={{
+                transform:
+                  "translate3d(calc(var(--px, 0) * -20px), calc(var(--py, 0) * -20px), 0)",
+              }}
+            >
+              <div className="bg-accent/30 size-full rounded-full blur-3xl motion-safe:animate-pulse" />
+            </div>
+
+            <div ref={floatRef} className="absolute inset-0">
+              <div
+                className="border-accent/60 shadow-accent/20 relative size-full rounded-full border-2 shadow-[0_0_40px] will-change-transform"
+                style={{
+                  transform:
+                    "perspective(900px) rotateX(calc(var(--py, 0) * -8deg)) rotateY(calc(var(--px, 0) * 8deg))",
+                }}
+              >
+                <Image
+                  src={HeroImage}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
+                  alt="Swann Waeles"
+                  className="object-contain p-7"
+                />
+              </div>
+            </div>
+
+            {FLOATING_CHIPS.map((chip) => (
+              <FloatingChip key={chip.label} {...chip} visible={mounted} />
+            ))}
           </div>
         </div>
       </div>
