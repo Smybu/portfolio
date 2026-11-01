@@ -1,17 +1,17 @@
-import { FC, SVGProps } from 'react'
+import { FC, SVGProps } from "react";
 
-import JavaScriptIcon from '../assets/icons/javascript.svg'
-import PhpIcon from '../assets/icons/php.svg'
-import NextjsIcon from '../assets/icons/nextjs.svg'
-import NodejsIcon from '../assets/icons/nodejs.svg'
-import ReactIcon from '../assets/icons/react.svg'
-import Star from '../assets/icons/star.svg'
-import TailwindCSS from '../assets/icons/tailwind-css.svg'
-import TypescriptIcon from '../assets/icons/typescript.svg'
-import PythonIcon from '../assets/icons/python.svg'
-import CIcon from '../assets/icons/c.svg'
-import JavaIcon from '../assets/icons/java.svg'
-import DatabaseIcon from '../assets/icons/database.svg'
+import JavaScriptIcon from "../assets/icons/javascript.svg";
+import PhpIcon from "../assets/icons/php.svg";
+import NextjsIcon from "../assets/icons/nextjs.svg";
+import NodejsIcon from "../assets/icons/nodejs.svg";
+import ReactIcon from "../assets/icons/react.svg";
+import Star from "../assets/icons/star.svg";
+import TailwindCSS from "../assets/icons/tailwind-css.svg";
+import TypescriptIcon from "../assets/icons/typescript.svg";
+import PythonIcon from "../assets/icons/python.svg";
+import CIcon from "../assets/icons/c.svg";
+import JavaIcon from "../assets/icons/java.svg";
+import DatabaseIcon from "../assets/icons/database.svg";
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -22,14 +22,15 @@ const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 20 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <path
         d="M19.25 6.69867C16.94 3.06867 13.56 0.978668 10 0.978668C8.22 0.978668 6.49 1.49867 4.91 2.46867C3.33 3.44867 1.91 4.87867 0.75 6.69867C-0.25 8.26867 -0.25 10.8187 0.75 12.3887C3.06 16.0287 6.44 18.1087 10 18.1087C11.78 18.1087 13.51 17.5887 15.09 16.6187C16.67 15.6387 18.09 14.2087 19.25 12.3887C20.25 10.8287 20.25 8.26867 19.25 6.69867ZM10 13.5887C7.76 13.5887 5.96 11.7787 5.96 9.54867C5.96 7.31867 7.76 5.50867 10 5.50867C12.24 5.50867 14.04 7.31867 14.04 9.54867C14.04 11.7787 12.24 13.5887 10 13.5887Z"
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 const GithubIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -39,7 +40,8 @@ const GithubIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 24 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -47,8 +49,8 @@ const GithubIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 const ArrowLeftIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -63,12 +65,13 @@ const ArrowLeftIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}>
+      {...props}
+    >
       <line x1="19" y1="12" x2="5" y2="12"></line>
       <polyline points="12 19 5 12 12 5"></polyline>
     </svg>
-  )
-}
+  );
+};
 
 const ArrowRightIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -83,12 +86,13 @@ const ArrowRightIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}>
+      {...props}
+    >
       <line x1="5" y1="12" x2="19" y2="12"></line>
       <polyline points="12 5 19 12 12 19"></polyline>
     </svg>
-  )
-}
+  );
+};
 
 const CheckIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -102,11 +106,12 @@ const CheckIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}>
+      {...props}
+    >
       <path d="M20 6 9 17l-5-5" />
     </svg>
-  )
-}
+  );
+};
 
 const ChevronRightIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -120,11 +125,12 @@ const ChevronRightIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}>
+      {...props}
+    >
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
-  )
-}
+  );
+};
 
 const LinkedIn: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -134,15 +140,16 @@ const LinkedIn: FC<SVGProps<SVGSVGElement>> = (props) => {
       height={24}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <title>LinkedIn</title>
       <path
         fill="currentColor"
         d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
       />
     </svg>
-  )
-}
+  );
+};
 
 const BurgerIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -152,11 +159,15 @@ const BurgerIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 18 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
-      <path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z" fill="currentColor" />
+      {...props}
+    >
+      <path
+        d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"
+        fill="currentColor"
+      />
     </svg>
-  )
-}
+  );
+};
 
 const CloseIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -166,14 +177,15 @@ const CloseIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <path
         d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z"
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 const StarIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -183,7 +195,8 @@ const StarIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 20 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <path
         d="M9.10264 3.58103C9.46948 2.83787 10.5292 2.83787 10.8961 3.58103L12.3419 6.51016C12.4874 6.80501 12.7686 7.00947 13.094 7.05702L16.3289 7.52985C17.1488 7.6497 17.4756 8.65754 16.882 9.2357L14.5428 11.5141C14.3069 11.7438 14.1993 12.075 14.2549 12.3995L14.8068 15.617C14.9469 16.434 14.0893 17.057 13.3557 16.6712L10.4648 15.1508C10.1734 14.9976 9.82528 14.9976 9.5339 15.1508L6.64298 16.6712C5.90935 17.057 5.0518 16.434 5.19192 15.617L5.74377 12.3995C5.79943 12.075 5.69177 11.7438 5.45589 11.5141L3.1167 9.2357C2.5231 8.65754 2.84988 7.6497 3.6698 7.52985L6.90472 7.05702C7.23007 7.00947 7.51125 6.80501 7.65679 6.51016L9.10264 3.58103Z"
         stroke="#FFB800"
@@ -192,12 +205,135 @@ const StarIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
+
+const MailIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="text-accent size-5 shrink-0 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </svg>
+  );
+};
+
+const FrenchIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      width="24"
+      height="16"
+      viewBox="0 0 24 16"
+      className="shrink-0 rounded-[3px] shadow-[0_0_1px_#aaa]"
+    >
+      <rect width="8" height="16" fill="#0055A4" />
+      <rect x="8" width="8" height="16" fill="#fff" />
+      <rect x="16" width="8" height="16" fill="#EF4135" />
+    </svg>
+  );
+};
+
+const EnglishIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      width="24"
+      height="16"
+      viewBox="0 0 24 16"
+      className="shrink-0 rounded-[3px] shadow-[0_0_1px_#aaa]"
+    >
+      <rect width="24" height="16" fill="#012169" />
+      <path d="M0 0L24 16M24 0L0 16" stroke="#fff" strokeWidth="3" />
+      <path d="M0 0L24 16M24 0L0 16" stroke="#C8102E" strokeWidth="1.5" />
+      <rect x="10" width="4" height="16" fill="#fff" />
+      <rect y="6" width="24" height="4" fill="#fff" />
+      <rect x="11" width="2" height="16" fill="#C8102E" />
+      <rect y="7" width="24" height="2" fill="#C8102E" />
+    </svg>
+  );
+};
+
+const ArrowIcon: FC<{ open: boolean }> = ({ open }) => {
+  return (
+    <svg
+      aria-hidden="true"
+      width="16"
+      height="16"
+      viewBox="0 0 20 20"
+      fill="none"
+      className={`shrink-0 transition-transform duration-200 ${
+        open ? "rotate-180" : ""
+      }`}
+    >
+      <path
+        d="M5 8l5 5 5-5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+const PaletteIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-6 transition-transform duration-300 group-hover:-rotate-12 md:size-7"
+    >
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+      <circle
+        cx="13.5"
+        cy="6.5"
+        r="1.3"
+        strokeWidth="0"
+        className="fill-primary"
+      />
+      <circle
+        cx="17.5"
+        cy="10.5"
+        r="1.3"
+        strokeWidth="0"
+        className="fill-primary"
+      />
+      <circle
+        cx="8.5"
+        cy="7.5"
+        r="1.3"
+        strokeWidth="0"
+        className="fill-primary"
+      />
+      <circle
+        cx="6.5"
+        cy="12.5"
+        r="1.3"
+        strokeWidth="0"
+        className="fill-primary"
+      />
+    </svg>
+  );
+};
 
 export {
   ArrowLeftIcon,
   ArrowRightIcon,
+  PaletteIcon,
   BurgerIcon,
   CheckIcon,
   ChevronRightIcon,
@@ -217,5 +353,9 @@ export {
   PythonIcon,
   CIcon,
   JavaIcon,
-  DatabaseIcon
-}
+  DatabaseIcon,
+  MailIcon,
+  FrenchIcon,
+  EnglishIcon,
+  ArrowIcon,
+};
