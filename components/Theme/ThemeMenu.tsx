@@ -13,6 +13,8 @@ const ThemeMenu = () => {
   const { lang } = useI18n();
   const t = getDictionary(lang);
 
+  const closeLabel = lang === "fr" ? "Fermer" : "Close";
+
   const themeOptions = [
     {
       key: "light",
@@ -35,7 +37,7 @@ const ThemeMenu = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.dataset.theme = theme;
     }
   }, [theme]);
 
@@ -67,33 +69,39 @@ const ThemeMenu = () => {
         <div className="bg-secondary animate-fade-in border-border absolute right-0 bottom-full mb-5 space-y-3 rounded-xl border p-3 md:space-y-4 md:p-5">
           <div className="text-primary-content border-border flex items-center justify-between border-b pb-3 md:pb-4">
             <span className="text-sm md:text-base">{t.theme_choice}</span>
-            <CloseIcon
+            <button
+              type="button"
               onClick={() => setShowThemeMenu(false)}
-              className="h-3 w-3 cursor-pointer md:h-4 md:w-4"
-            />
+              aria-label={closeLabel}
+              className="focus-visible:ring-accent hover:text-neutral cursor-pointer rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+            >
+              <CloseIcon className="h-3 w-3 md:h-4 md:w-4" />
+            </button>
           </div>
 
           {themeOptions.map(({ key, name, colors }) => (
-            <div
+            <button
+              type="button"
               key={key}
               onClick={() => changeTheme(key)}
+              aria-pressed={key === theme}
               style={{ background: colors[0], color: colors[1] }}
-              className="flex min-w-48 cursor-pointer items-center justify-between rounded-lg p-2 md:min-w-60 md:rounded-xl md:p-4"
+              className="focus-visible:ring-accent flex w-full min-w-48 cursor-pointer items-center justify-between rounded-lg p-2 text-left focus-visible:ring-2 focus-visible:outline-none md:min-w-60 md:rounded-xl md:p-4"
             >
-              <div className="flex items-end gap-1.5">
+              <span className="flex items-end gap-1.5">
                 <CheckIcon className={key === theme ? "block" : "hidden"} />
                 <span className="text-sm md:text-base">{name}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
+              </span>
+              <span className="flex items-center gap-1.5">
                 {colors.slice(1).map((color, idx) => (
-                  <div
+                  <span
                     key={color + idx}
                     style={{ background: color }}
                     className="size-2 rounded-full md:size-3"
-                  ></div>
+                  ></span>
                 ))}
-              </div>
-            </div>
+              </span>
+            </button>
           ))}
         </div>
       )}

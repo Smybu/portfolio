@@ -13,7 +13,7 @@ export const I18nProvider = ({
   children: React.ReactNode
 }) => {
   return (
-    <I18nContext.Provider value={{ lang }}>
+    <I18nContext.Provider value={{lang}}>
       {children}
     </I18nContext.Provider>
   )

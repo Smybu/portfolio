@@ -46,7 +46,7 @@ const Logo = (props: React.SVGProps<SVGSVGElement>) => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeDasharray="84.8 28.3"
-        className="stroke-accent origin-center -rotate-90 transition-transform duration-700 ease-out [transform-box:fill-box] group-hover:rotate-90"
+        className="stroke-accent origin-center -rotate-90 transition-transform duration-700 ease-out transform-fill group-hover:rotate-90"
       />
 
       <path

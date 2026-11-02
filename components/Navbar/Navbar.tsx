@@ -97,14 +97,8 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  const menuLabel =
-    lang === "fr"
-      ? isOpen
-        ? "Fermer le menu"
-        : "Ouvrir le menu"
-      : isOpen
-        ? "Close menu"
-        : "Open menu";
+  const menuLabels = {open: t.navbar_open_menu, close: t.navbar_close_menu};
+  const menuLabel = isOpen ? menuLabels.close : menuLabels.open;
 
   return (
     <nav className="border-border sticky top-0 isolate z-40 h-16 border-b">
@@ -165,7 +159,6 @@ const Navbar = () => {
             return (
               <li
                 key={id}
-                onClick={closeMenu}
                 style={{ transitionDelay: isOpen ? `${80 + i * 60}ms` : "0ms" }}
                 className={`border-border flex items-center border-b px-4 text-2xl transition-all duration-300 md:translate-x-0 md:border-y-0 md:border-e md:text-base md:opacity-100 md:first:border-s lg:px-8 ${
                   isOpen ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
@@ -173,6 +166,7 @@ const Navbar = () => {
               >
                 <Link
                   href={href}
+                  onClick={closeMenu}
                   aria-current={isActive ? "location" : undefined}
                   className={`after:bg-accent focus-visible:ring-accent relative flex h-full w-full items-center py-7 transition-colors duration-200 hover:text-neutral focus-visible:ring-2 focus-visible:outline-none md:py-0 md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-0.5 md:after:w-full md:after:origin-left md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 ${
                     isActive

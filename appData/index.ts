@@ -30,6 +30,7 @@ export const skillData = [
     title: "Databases",
     shortDescription: "MySQL, PostgreSQL, MongoDB, SQLite",
     stars: 4,
+    titlefr: "Base de données",
   },
   {
     icon: PhpIcon,

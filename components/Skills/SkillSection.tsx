@@ -26,7 +26,7 @@ const SkillSection = () => {
             key={skill.title}
             index={index}
             icon={skill.icon}
-            title={skill.title}
+            title={lang === 'fr' && skill.titlefr ? skill.titlefr : skill.title}
             shortDescription={skill.shortDescription}
             stars={skill.stars}
           />

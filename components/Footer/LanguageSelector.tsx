@@ -167,7 +167,14 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ current }) => {
               id={optionId(i)}
               role="option"
               aria-selected={isSelected}
+              tabIndex={-1}
               onClick={() => handleSelect(lang.code)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleSelect(lang.code);
+                }
+              }}
               onMouseEnter={() => setActiveIndex(i)}
               className={`text-neutral flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors duration-150 ${
                 i === activeIndex ? "bg-accent/20" : ""
@@ -175,9 +182,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ current }) => {
             >
               {getFlag(lang.code, lang.flag)}
               <span className="flex-1">{lang.label}</span>
-              {isSelected && (
-                <CheckIcon />
-              )}
+              {isSelected && <CheckIcon />}
             </li>
           );
         })}

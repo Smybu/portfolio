@@ -1,6 +1,6 @@
 import { Experience, ProjectType, Study } from '@/lib/types'
-import { promises as fs } from 'fs'
-import path from 'path'
+import { promises as fs } from 'node:fs'
+import path from 'node:path'
 
 const getAllProjects = async (): Promise<ProjectType[]> => {
   try {

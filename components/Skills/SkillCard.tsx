@@ -6,6 +6,7 @@ import AnimatedCard from '../Animation/AnimatedCard'
 interface SkillCardProps {
   icon: string
   title: string
+  titlefr?: string
   shortDescription: string
   stars: number
   index?: number
@@ -32,15 +33,18 @@ const SkillCard: React.FC<SkillCardProps> = ({
     <AnimatedCard index={index} staggerEvery={3} revealThreshold={0.2} cardClassName="items-center">
       {({ revealed }) => (
         <>
-          <div
-            role="meter"
-            aria-label={title}
-            aria-valuemin={0}
-            aria-valuemax={MAX_LEVEL}
-            aria-valuenow={level}
-            aria-valuetext={`${level}/${MAX_LEVEL}`}
-            className="relative mt-1 flex size-28 items-center justify-center"
-          >
+          <div className="relative mt-1 flex size-28 items-center justify-center">
+            <meter
+              className="sr-only"
+              min={0}
+              max={MAX_LEVEL}
+              value={level}
+              aria-label={title}
+              aria-valuetext={`${level}/${MAX_LEVEL}`}
+            >
+              {level}/{MAX_LEVEL}
+            </meter>
+
             <svg
               viewBox="0 0 100 100"
               aria-hidden="true"

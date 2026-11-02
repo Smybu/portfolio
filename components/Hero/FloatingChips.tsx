@@ -1,12 +1,6 @@
 "use client";
 import useFloat from "@/hooks/useFloat";
-import useParallaxTilt from "@/hooks/useParallaxTilt";
-import useRoleSwitcher from "@/hooks/useRoleSwitcher";
-import { getDictionary } from "@/lib/i18n";
-import { useI18n } from "@/lib/i18nProvider";
-import Image from "next/image";
-import { FC, useEffect, useState } from "react";
-import { HeroImage } from "../../utils/images";
+import { FC } from "react";
 
 export const FLOATING_CHIPS = [
   {

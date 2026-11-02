@@ -10,6 +10,8 @@
     "navbar_skills": "#Skills",
     "navbar_experiences": "#Experiences",
     "navbar_projects": "#Projects",
+    "navbar_open_menu": "Open menu",
+    "navbar_close_menu": "Close menu",
     "theme_choice": "Theme choice",
     "theme_dark": "Dark",
     "theme_light": "Light",

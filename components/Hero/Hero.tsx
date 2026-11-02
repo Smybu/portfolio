@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-4 px-4 pt-12 pb-10 md:grid-cols-2 lg:p-4">
-        <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem]">
+        <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-135">
           <h1>
             <span className="text-neutral mb-2 block text-3xl font-bold">
               {t.welcome}
@@ -59,7 +59,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               target="_blank"
               aria-label="Connect with me"
-              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#fff] hover:bg-accent/60 transition-colors duration-300"
+              className="bg-accent min-w-32 cursor-pointer rounded-lg px-3.5 py-2.5 text-center text-sm font-medium text-white hover:bg-accent/60 transition-colors duration-300"
             >
               {t.hero_cv}
             </a>
@@ -68,7 +68,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View LinkedIn Profile"
-              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm font-medium hover:bg-secondary/60 transition-colors duration-300"
+              className="text-neutral bg-secondary cursor-pointer rounded-lg px-3.5 py-2.5 text-sm font-medium hover:bg-secondary/60 transition-colors duration-300"
             >
               {t.hero_linkedin}
             </a>
@@ -77,9 +77,9 @@ const Hero = () => {
 
         <div
           ref={stageRef}
-          className="flex min-h-[18.75rem] items-center justify-center lg:min-h-[35rem]"
+          className="flex min-h-75 items-center justify-center lg:min-h-140"
         >
-          <div className="relative size-56 sm:size-60 md:size-[20rem] lg:size-[25.75rem]">
+          <div className="relative size-56 sm:size-60 md:size-80 lg:size-103">
             <div
               aria-hidden="true"
               className={`absolute inset-4 motion-safe:transition-opacity motion-safe:duration-1000 ${

@@ -68,8 +68,8 @@ const Footer = () => {
           </div>
 
           <ul className="flex flex-row flex-wrap justify-center gap-3">
-            {socials.map((item, index) => (
-              <li key={index}>
+            {socials.map((item) => (
+              <li key={item.href}>
                 <a
                   href={item.href}
                   target="_blank"
@@ -123,7 +123,7 @@ const Footer = () => {
             'translate3d(calc(var(--px, 0) * -24px), calc(var(--py, 0) * -24px), 0)',
         }}
       >
-        <div className="bg-neutral/4 absolute top-1/2 -right-[40%] z-0 h-[120dvw] w-[120dvw] -translate-y-1/2 rounded-full p-14 md:top-0 md:-right-[255px] md:-bottom-[450px] md:size-[1030px] md:-translate-y-0 md:p-20">
+        <div className="bg-neutral/4 absolute top-1/2 -right-[40%] z-0 h-[120dvw] w-[120dvw] -translate-y-1/2 rounded-full p-14 md:top-0 md:-right-[255px] md:-bottom-[450px] md:size-[1030px] md:translate-y-0 md:p-20">
           <div className="bg-neutral/4 size-full rounded-full p-14 md:p-20">
             <div className="bg-neutral/5 size-full rounded-full" />
           </div>
