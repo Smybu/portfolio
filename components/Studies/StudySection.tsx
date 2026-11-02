@@ -1,48 +1,50 @@
 'use client'
 
+import { getDictionary } from '@/lib/i18n'
+import { useI18n } from '@/lib/i18nProvider'
 import { Study } from '@/lib/types'
 import { useState } from 'react'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import StudyCard from './StudyCard'
-import { useI18n } from '@/lib/i18nProvider'
-import { getDictionary } from '@/lib/i18n'
+import SectionGlow from '../Animation/SectionGlow'
 
-interface StudieSectionProps {
+interface StudySectionProps {
   studies: Study[]
 }
 
-const StudySection: React.FC<StudieSectionProps> = ({ studies }) => {
+const StudySection: React.FC<StudySectionProps> = ({ studies }) => {
   const [activeCard, setActiveCard] = useState(0)
 
   const { lang } = useI18n()
   const t = getDictionary(lang)
 
   return (
-    <section id="studies" className="select-none">
+    <section id="studies" className="relative select-none">
+      <SectionGlow />
+
       <SectionHeading
         title={t.studies_section_title}
         subtitle={t.studies_section_subtitle}
       />
 
-      <div className="my-8 flex flex-col gap-8 md:flex-row md:overflow-x-auto">
+      <div className="my-8 flex flex-col gap-8 md:flex-row md:items-stretch">
         {studies.map((study, idx) => (
           <StudyCard
-            key={idx}
+            key={study[lang].degree}
+            index={idx}
             study={study}
             handleActiveCard={() => setActiveCard(idx)}
           />
         ))}
       </div>
 
-      <div className="flex items-center justify-center gap-1 sm:hidden">
-        {studies.map((_, idx) => (
+      <div className="flex items-center justify-center gap-1.5 sm:hidden">
+        {studies.map((study, idx) => (
           <div
-            key={idx}
-            className={`${
-              idx === activeCard
-                ? 'bg-accent size-[12px]'
-                : 'size-[10px] bg-white/50'
-            } rounded-full`}
+            key={study[lang].degree}
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              idx === activeCard ? 'bg-accent w-6' : 'w-2.5 bg-white/40'
+            }`}
           />
         ))}
       </div>
